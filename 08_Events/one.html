@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="farmer" src="fm.jpg" alt="man"></li>
+            <li><img width="200px" id="river" src="river.jpg" alt=""></li>
+            <li><img width="200px" id="mountain" src="mountain.jpg" alt=""></li>
+            <li><img width="200px" id="cricket" src="cricket.jpg" alt=""></li>
+            <li><img width="200px" id="football" src="football.jpg" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    //    document.getElementById('cricket').addEventListener('click',function(e){
+     // console.log(e);
+    // })
+
+    //  document.getElementById('cricket').onclick = function(){
+    //     alert("cricket clicked")
+    //  }
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside the ul");
+    // },false)
+    // document.getElementById('cricket').addEventListener('click',function(e){
+    //     console.log("cricket clicked");
+    //     e.stopPropagation()
+    // },false)
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+        
+    // },false)
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        if(e,target.tagName === 'IMG'){
+                console.log(e.target.id);
+                let removeIt = e.target.parentNode
+                removeIt.remove()
+        }
+        
+    })
+
+</script>
+</html>
